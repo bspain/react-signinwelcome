@@ -19,9 +19,9 @@ class SignUpPage extends React.Component
     }
 
     signUpPageOnChange(event) {
-        let guest = Object.assign({}, this.state.guest);
-        let errors  = Object.assign({}, this.state.errors);
-        let submitEnabled = Object.assign({}, this.state.submitEnabled);
+        let guest = this.state.guest;
+        let errors  = this.state.errors;
+        let submitEnabled = this.state.submitEnabled;
 
         switch(event.target.name)
         {
@@ -67,7 +67,7 @@ class SignUpPage extends React.Component
             submitEnabled = false;
         }
 
-        this.setState({guest, errors, submitEnabled});
+        this.setState(Object.assign(this.state, {guest, errors, submitEnabled}));
     }
 
     signUpPageOnSave(event) {
