@@ -70,7 +70,7 @@ class SignUpPage extends React.Component
 
     signUpPageOnSave(event) {
         event.preventDefault();
-        this.context.router.push({ pathname: '/welcome', state: { guest: this.state.guest }});
+        //this.context.router.push({ pathname: '/welcome', state: { guest: this.state.guest }});
     }
 
     render() 
