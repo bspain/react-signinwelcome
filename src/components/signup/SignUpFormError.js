@@ -2,11 +2,10 @@ import React from 'react';
 
 const SignUpFormError = ({message}) => {
     return (
-        <div 
-            className="alert alert-warning"
-            role="alert">
+        <small 
+            className="form-text text-muted">
             {message}
-        </div>);
+        </small>);
 };
 
 export default SignUpFormError;

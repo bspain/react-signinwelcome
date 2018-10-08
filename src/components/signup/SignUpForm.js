@@ -11,14 +11,14 @@ const SignUpForm = ({guest, errors, onSave, onChange, submitEnabled}) => {
                     <h1><b>Sign Up</b></h1>
                 </div>
                 <p>Use the form below to sign up for this super awesome service.  You're only a few steps away!</p>
-                <div className={`form-group ${errorClass(errors.guestNameError)}`}>
+                <div className="form-group">
                     <div className="field">
                         <input
                             type="text"
                             name="guestName"
                             aria-label="first name"
                             autoComplete="name"
-                            className="form-control"
+                            className={`form-control ${errorClass(errors.guestNameError)}`}
                             placeholder="First Name"
                             value={guest.name}
                             onChange={onChange}/>
@@ -27,14 +27,14 @@ const SignUpForm = ({guest, errors, onSave, onChange, submitEnabled}) => {
                         <SignUpFormError message={errors.guestNameError} />
                     }  
                 </div>
-                <div className={`form-group ${errorClass(errors.guestEmailError)}`}>
+                <div className="form-group">
                     <div className="field">
                         <input
                             type="email"
                             name="guestEmail"
                             aria-label="email address"
                             autoComplete="email"
-                            className="form-control"
+                            className={`form-control ${errorClass(errors.guestEmailError)}`}
                             placeholder="Email Address"
                             value={guest.email}
                             onChange={onChange}/>
@@ -43,14 +43,14 @@ const SignUpForm = ({guest, errors, onSave, onChange, submitEnabled}) => {
                         <SignUpFormError message={errors.guestEmailError} />
                     }  
                 </div>
-                <div className={`form-group ${errorClass(errors.guestPasswordError)}`}>
+                <div className="form-group">
                     <div className="field">
                         <input
                             type="password"
                             name="guestPassword"
                             aria-label="password"
                             autoComplete="new-password"
-                            className="form-control"
+                            className={`form-control ${errorClass(errors.guestPasswordError)}`}
                             placeholder="Password"
                             value={guest.password}
                             onChange={onChange}/>
@@ -64,7 +64,7 @@ const SignUpForm = ({guest, errors, onSave, onChange, submitEnabled}) => {
                     value="Sign Up"
                     aria-label="sign up"
                     disabled={!submitEnabled}
-                    className="btn btn-primary pull-right"
+                    className="btn btn-primary float-right"
                     onClick={onSave} />
             </form>
         </div>
@@ -73,7 +73,7 @@ const SignUpForm = ({guest, errors, onSave, onChange, submitEnabled}) => {
 
 function errorClass(error)
 {
-    return (error && error.length > 0) ? 'has-error' : '';
+    return (error && error.length > 0) ? 'is-invalid' : '';
 }
 
 export default SignUpForm;

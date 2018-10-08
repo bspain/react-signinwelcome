@@ -20,7 +20,7 @@ const WelcomePage = (props) => {
                 <input
                     type="submit"
                     value="Sign In"
-                    className="btn btn-primary pull-right"
+                    className="btn btn-primary float-right"
                 />
             </div>
         </div>
