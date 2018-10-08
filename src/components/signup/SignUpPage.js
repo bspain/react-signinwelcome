@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Redirect } from 'react-router-dom';
 import SignUpForm from './SignUpForm';
 
 class SignUpPage extends React.Component
@@ -9,7 +10,8 @@ class SignUpPage extends React.Component
         this.state = {
             guest: { name: '', email: '', password: ''},
             errors: { guestNameError: null, guestEmailError: null, guestPasswordError: null},
-            submitEnabled: false
+            submitEnabled: false,
+            submitProcessed: false
         };
 
         this.signUpPageOnChange = this.signUpPageOnChange.bind(this);
@@ -69,12 +71,22 @@ class SignUpPage extends React.Component
     }
 
     signUpPageOnSave(event) {
+        debugger;
         event.preventDefault();
+        this.setState(Object.assign(this.state, { submitProcessed: true }));
         //this.context.router.push({ pathname: '/welcome', state: { guest: this.state.guest }});
     }
 
     render() 
     {
+        if (this.state.submitProcessed)
+        {
+            return (<Redirect to={{
+                pathname: "/welcome",
+                state: { guest: this.state.guest}
+            }}/>)
+        }
+
         return (
             <SignUpForm
                 guest={this.state.guest}
