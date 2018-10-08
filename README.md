@@ -1,6 +1,7 @@
 This app is a simple Sign-in and Welcome screen example in React.
 
-
+![sign in page](https://raw.githubusercontent.com/spainb123/react-signinwelcome/master/readme/signin.png)
+![welcome page](https://raw.githubusercontent.com/spainb123/react-signinwelcome/master/readme/welcome.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
