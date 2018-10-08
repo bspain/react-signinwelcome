@@ -71,10 +71,8 @@ class SignUpPage extends React.Component
     }
 
     signUpPageOnSave(event) {
-        debugger;
         event.preventDefault();
         this.setState(Object.assign(this.state, { submitProcessed: true }));
-        //this.context.router.push({ pathname: '/welcome', state: { guest: this.state.guest }});
     }
 
     render() 
