@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Redirect } from 'react-router-dom';
 import SignUpForm from './SignUpForm';
 
