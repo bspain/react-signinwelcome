@@ -1,0 +1,33 @@
+#root {
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #4d4d4d;
+    margin: 0 auto;
+}
+
+#root p {
+    color: rgb(141, 141, 141);
+}
+
+#root h1 {
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+#root .btn-primary {
+    background-color: rgb(184, 27, 123);
+}
+
+.fgcs_content_greeting {
+    margin-bottom: 22px;
+}
+
+@media only screen and (min-width: 768px)
+{
+    .fgcs_top_row {
+        padding-top: 120px
+    }
+    .fgcs_welcome_guest_email {
+        padding-bottom: 120px
+    }
+}
+
