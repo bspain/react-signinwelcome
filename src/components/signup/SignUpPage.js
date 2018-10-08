@@ -31,7 +31,7 @@ class SignUpPage extends React.Component
             case 'guestEmail':
                 if (!event.target.value.includes('@')) // TODO: More robust email validation rules
                 {
-                    errors.guestEmailError = "Not a valid email address";
+                    errors.guestEmailError = "Not a valid email address.  Address must include '@' symbol.";
                 }
                 else
                 {
