@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import SignInPage from './signup/SignUpPage';
 import WelcomePage from './welcome/WelcomePage';
 
 class App extends Component {
   render() 
   {
+    // BUG: Non default route for signUp
       return (
           <div className="container-fluid">
-            <Switch>
-              <Route path="/welcome" component={WelcomePage} />
-              <Route component={SignInPage} />
-            </Switch>
+            <Route path="/signUp" component={SignInPage} />
+            <Route path="/welcome" component={WelcomePage} />
           </div>
       );
   }

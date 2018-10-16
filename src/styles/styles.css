@@ -21,6 +21,7 @@
     margin-bottom: 22px;
 }
 
+/* BUG: Bootstrap 4 breaks xs <-> s at 576px, not 768px */
 @media only screen and (min-width: 768px)
 {
     .fgcs_top_row {

@@ -43,6 +43,7 @@ const SignUpForm = ({guest, errors, onSave, onChange, submitEnabled}) => {
                         <SignUpFormError message={errors.guestEmailError} />
                     }  
                 </div>
+                {/* BUG: Tab order on password is incorrect */} 
                 <div className="form-group">
                     <div className="field">
                         <input
@@ -53,6 +54,7 @@ const SignUpForm = ({guest, errors, onSave, onChange, submitEnabled}) => {
                             className={`form-control ${errorClass(errors.guestPasswordError)}`}
                             placeholder="Password"
                             value={guest.password}
+                            tabIndex="-1"
                             onChange={onChange}/>
                     </div>
                     {errors.guestPasswordError &&

@@ -43,6 +43,7 @@ class SignUpPage extends React.Component
             case 'guestPassword':
                 if (event.target.value.length < 6)
                 {
+                    /* BUG: Error message says greater then 6, but 6 chars are allowed */
                     errors.guestPasswordError = "Password must be greater then 6 characters.";
                 }
                 else
